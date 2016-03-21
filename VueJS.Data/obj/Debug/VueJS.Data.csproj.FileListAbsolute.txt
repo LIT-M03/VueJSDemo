@@ -1,0 +1,6 @@
+c:\Users\alexfriedman\documents\visual studio 2013\Projects\MVCVueJs\VueJS.Data\bin\Debug\VueJS.Data.dll.config
+c:\Users\alexfriedman\documents\visual studio 2013\Projects\MVCVueJs\VueJS.Data\bin\Debug\VueJS.Data.dll
+c:\Users\alexfriedman\documents\visual studio 2013\Projects\MVCVueJs\VueJS.Data\bin\Debug\VueJS.Data.pdb
+c:\Users\alexfriedman\documents\visual studio 2013\Projects\MVCVueJs\VueJS.Data\obj\Debug\VueJS.Data.csprojResolveAssemblyReference.cache
+c:\Users\alexfriedman\documents\visual studio 2013\Projects\MVCVueJs\VueJS.Data\obj\Debug\VueJS.Data.dll
+c:\Users\alexfriedman\documents\visual studio 2013\Projects\MVCVueJs\VueJS.Data\obj\Debug\VueJS.Data.pdb

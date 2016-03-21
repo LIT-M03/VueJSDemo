@@ -1,0 +1,58 @@
+﻿
+
+<div id="appdiv">
+    <button class="btn btn-primary" v-on:click="addPerson">Add Person</button>
+    <table class="table table-hover table-striped table-bordered">
+        <tr>
+            <th>First Name</th>
+            <th>Last Name <button class="btn btn-default" v-on:click="sortPeople">
+                              <span class="glyphicon"
+                                v-bind:class="[sortLastNameAsc ? 'glyphicon-chevron-up' : 'glyphicon-chevron-down']"></span>
+            </button></th>
+            <th>Age</th>
+            <th>Actions</th>
+        </tr>
+        <template v-for="p in people">
+            <tr>
+                <td>{{p.FirstName}}</td>
+                <td>{{p.LastName}}</td>
+                <td>{{p.Age}}</td>
+                <td>
+                    <button class="btn btn-danger" v-on:click="deletePerson(p)">Delete</button>
+                    <button style="margin-left: 20px;" class="btn btn-warning" v-on:click="editPerson(p)">Edit</button>
+                </td>
+            </tr>
+        </template>
+    </table>
+
+    <div class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">Modal title</h4>
+                </div>
+                <div class="modal-body">
+                    <input type="text" placeholder="First Name" class="form-control" lazy="lazy" v-model="person.FirstName"/>
+                    <br/>
+                    <input type="text" placeholder="Last Name" class="form-control" v-model="person.LastName"/>
+                    <br/>
+                    <input type="text" placeholder="Age" class="form-control" v-model="person.Age" />
+                </div>
+                <div class="modal-footer">
+
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" v-on:click="saveEdit" v-if="editMode">Update</button>
+                    <button type="button" class="btn btn-primary" v-on:click="saveAdd" v-else>Add</button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+</div>
+
+@section scripts
+{
+
+    <script src="/Scripts/vue.js"></script>
+    <script src="~/Scripts/app.js"></script>
+}
